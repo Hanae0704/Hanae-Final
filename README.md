@@ -1,4 +1,4 @@
-# Web Starter Project
+# Web2 Hanae Final
 A foundational app for building with Express and Create React App.
 Inspired by a desire to set my students up to win for my courses.
 
