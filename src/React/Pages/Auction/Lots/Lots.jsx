@@ -1,0 +1,42 @@
+import React from 'react';
+import styled from 'styled-components';
+
+/* Redux ---------------------------*/
+import { useSelector } from 'react-redux';
+
+/* Component ---------------------------*/
+import Lot from './Lot.jsx';
+
+const Lots = () => {
+
+    const { auction } = useSelector((state) => state);
+
+    return (
+        <LotsStyled className='Lots'>
+            <div className="lots-container">
+            {
+                auction.current.lots.map((lot, idx) => {
+                    return <Lot 
+                            key={idx} 
+                            lot={lot} 
+                            auctionID={auction.current.id}/>
+                })
+            }
+            </div>
+        </LotsStyled>
+    );
+}
+
+export default Lots;
+
+const LotsStyled = styled.div`
+
+.lots-container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+    
+`;
