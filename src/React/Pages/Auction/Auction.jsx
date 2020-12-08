@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Helmet from 'react-helmet';
 
 /* Components ---------------------------*/
 import Lots from './Lots/Lots.jsx';
@@ -14,6 +15,9 @@ const Auction = () => {
 
     return (
         <AuctionStyled className='Auction'>
+            <Helmet>
+            <title>Contact | Amity Hair</title>
+            </Helmet>
             {
                     !user.isLoggedIn &&
                     <h2>LOGIN TO ADD TO YOUR CART</h2>

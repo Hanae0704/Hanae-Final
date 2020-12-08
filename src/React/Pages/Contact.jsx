@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 
 /* Components ---------------------------*/
 import UniversalForm from 'React/Shared/UniversalForm/UniversalForm.jsx';
@@ -19,6 +20,9 @@ const Contact = () => {
 
     return (
         <ContactStyled className='Contact'>
+            <Helmet>
+            <title>Contact | Amity Hair</title>
+            </Helmet>
             <UniversalForm 
                 formData={ defaultData } 
                 submitText='Email Us'
