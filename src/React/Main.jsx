@@ -46,6 +46,7 @@ const Main = () => {
 export default Main;
 
 const MainStyled = styled.div`
+
     background-color: white;
     max-width: 1200px;
     width: 100%;

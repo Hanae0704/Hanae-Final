@@ -87,13 +87,14 @@ const Login = () => {
 export default Login;
 
 const LoginStyled = styled.div`
+
     position: relative;
     text-align: center;
 
     .bottom {
         position: absolute;
-        right: 0px;
-        top: 56px;
+        right: -21px;
+        top: 55px;
 
         background-color: white;
         padding: 10px;
@@ -101,6 +102,15 @@ const LoginStyled = styled.div`
 
         width: 400px;
         z-index: 1000;
+
+        @media (max-width: 500px) {
+            right: -36px;
+            top: 40px;
+            padding: 5px;
+            width: 290px;
+            
+            font-size: 12px;
+        }
         
 
         &::before {

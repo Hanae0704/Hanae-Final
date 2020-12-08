@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 /* Redux ---------------------------*/
 import { useSelector } from 'react-redux';
@@ -9,7 +10,7 @@ import Lot from './Lot.jsx';
 
 const Lots = () => {
 
-    const { auction } = useSelector((state) => state);
+    const { auction, user } = useSelector((state) => state);
 
     return (
         <LotsStyled className='Lots'>
@@ -23,6 +24,10 @@ const Lots = () => {
                 })
             }
             </div>
+            {
+                    user.isLoggedIn &&
+                    <NavLink className="cart" to ='/auction/bids'>VIEW IN YOUR CART</NavLink>   
+            }
         </LotsStyled>
     );
 }
@@ -36,6 +41,7 @@ const LotsStyled = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 40px;
     
 }
     

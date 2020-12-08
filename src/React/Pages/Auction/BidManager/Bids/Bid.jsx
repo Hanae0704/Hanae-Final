@@ -15,7 +15,7 @@ const Bid = ({bid}) => {
     return (
         <BidStyled className='Bid'>
             <div>
-                { `${bid.lot.title}: ${bid.lot.title}` }
+                { `${bid.lot.title}: ${bid.lot.price} ` }
                 <button
                     type='button'
                     onClick={ handleRemoveLot }
@@ -30,5 +30,5 @@ const Bid = ({bid}) => {
 export default Bid;
 
 const BidStyled = styled.div`
-    
+    padding: 5px;
 `;

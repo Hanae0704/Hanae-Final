@@ -23,7 +23,8 @@ export default Toggle;
 
 const ToggleStyled = styled.div`
 
-    margin-top: 15px;
+    margin-top: 12px;
+    margin-right: -20px;
 
     .Button {
         width: 50px;
@@ -44,4 +45,14 @@ const ToggleStyled = styled.div`
             height: auto;
         }
     }
+
+    @media (max-width: 500px) {
+        margin-top: 0px;
+        margin-right: -30px;
+
+        .Button {
+            width: 40px;
+        }
+    }
+
 `;

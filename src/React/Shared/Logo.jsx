@@ -17,8 +17,27 @@ export default Logo;
 
 const LogoStyled = styled.div`
 
+    margin-left: -20px;
+
     img {
         max-width: 300px;
     }
 
+    @media (max-width: 500px) {
+
+        margin-left: -30px;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        padding-top: 5px;
+
+        img {
+            width: 170px;
+        }
+    }
 `;

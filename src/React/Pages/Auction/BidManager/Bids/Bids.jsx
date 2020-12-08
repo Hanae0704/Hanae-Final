@@ -26,13 +26,14 @@ const Bids = ({bids}) => {
 
     return (
         <BidsStyled className='Bids'>
+            <h3>Your Appointment:</h3>
             {
                 bids.map((bid, idx) => {
                      return <Bid key= { idx } bid={ bid } />
                 })
             }
 
-            <Button onClick={ handleSubmitBids }>Submit Bids</Button>
+            <Button onClick={ handleSubmitBids }><b>Check Out</b></Button>
         </BidsStyled>
     );
 }
@@ -40,5 +41,15 @@ const Bids = ({bids}) => {
 export default Bids;
 
 const BidsStyled = styled.div`
-    
+    .Button {
+        background-color: #de6444;
+        margin-top: 30px;
+        width: 150px;
+        height: 45px;
+
+
+        &:hover {
+            background-color: #ee5d37;
+        }
+    }
 `;

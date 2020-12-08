@@ -40,4 +40,5 @@ const InputStyled = styled.input`
     border: solid 1px #999;
     width: 100%;
     
+    
 `;

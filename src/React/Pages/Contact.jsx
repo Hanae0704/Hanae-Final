@@ -7,6 +7,7 @@ import UniversalForm from 'React/Shared/UniversalForm/UniversalForm.jsx';
 const Contact = () => {
 
     const defaultData = [
+        { id: 'name', value: '', required: true, label: 'Name', type: 'name', },
         { id: 'email', value: '', required: true, label: 'Email', type: 'email', },
         { id: 'message', value: '', required: false, label: 'Message', type: 'textarea', },
 
@@ -31,5 +32,5 @@ const Contact = () => {
 export default Contact;
 
 const ContactStyled = styled.div`
-    
+
 `;

@@ -5,7 +5,8 @@ const BidThanks = () => {
 
     return (
         <BidThanksStyled className='BidThanks'>
-            <h1>Thank you for your order!</h1>
+            <div className="thankyou">Thank you for the appointment!</div>
+            <img src="/assets/img/thankyou.gif" alt="ThankYou"/>
         </BidThanksStyled>
     );
 }
@@ -13,5 +14,16 @@ const BidThanks = () => {
 export default BidThanks;
 
 const BidThanksStyled = styled.div`
+    font-size: 25px;
     color: #de6444;
+
+    img {
+        max-width: 90%;
+    }
+    
+    @media (max-width: 500px) {
+        .thankyou {
+            font-size: 18px;
+        }
+    }
 `;

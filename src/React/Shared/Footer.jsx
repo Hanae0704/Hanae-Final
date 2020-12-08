@@ -25,7 +25,7 @@ const FooterStyled = styled.footer`
     }
         text-align: center;
         padding: 50px 20px;
-        /* border-top: solid 1px #eee; */
+        border-top: solid 1px #eee;
         color: #333;
         font-size: 11px;
 `;

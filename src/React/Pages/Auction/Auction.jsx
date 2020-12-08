@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 
 /* Components ---------------------------*/
 import Lots from './Lots/Lots.jsx';
@@ -17,17 +16,13 @@ const Auction = () => {
         <AuctionStyled className='Auction'>
             {
                     !user.isLoggedIn &&
-                    <h2>Login to add to your cart</h2>
+                    <h2>LOGIN TO ADD TO YOUR CART</h2>
             }
             <Switch>
                 <Route path='/auction/bids' component={ BidManager }/>
                 <Route path='/auction/thanks' component={ BidThanks }/>
                 <Route path='/auction/' component={ Lots } exact/>
             </Switch>
-            {
-                    user.isLoggedIn &&
-                    <NavLink className='NavLink' to ='/auction/bids'>View in your cart</NavLink>
-            }
         </AuctionStyled>
     );
 }
@@ -41,7 +36,7 @@ const AuctionStyled = styled.div`
         color: #de6444;
     }
 
-    .NavLink {
+    .cart {
         margin-top: 40px;
     }
     
@@ -51,10 +46,10 @@ const AuctionStyled = styled.div`
         width: 250px;
         line-height: 60px;
 
-        background-color: #eeeeee;
+        background-color: #de6444;
         
         border-radius: 5px;
-        color: #3a3a3a;
+        color: white;
 
         text-decoration: none;
         font-size: 20px;
@@ -62,7 +57,7 @@ const AuctionStyled = styled.div`
         margin: 0px 5px;
 
         &:hover {
-            background-color: #d3cfcf;
+            background-color: #ee5d37;
         }
         &.active {
             background-color: #ee5d37;

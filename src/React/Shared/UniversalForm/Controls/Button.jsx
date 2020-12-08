@@ -21,12 +21,12 @@ export default Button;
 
 const ButtonWithStyles = styled.button`
 
-    background-color: #f19e37;
+    background-color: #de6444;
     color: white;
 
     display: inline-block;
     margin: 10px;
-    padding: 8px 15px;
+    padding: 8px 10px;
     /* border-radius: 10px; */
 
     border: none;
@@ -34,6 +34,10 @@ const ButtonWithStyles = styled.button`
 
     box-shadow: 3px 3px 5px rgba(0,0,0,.3);
 
+    &:hover {
+            background-color: #ee5d37;
+        }
+        
     &:active {
         box-shadow: 0px 0px 10px rgba(0,0,0,.3);
     }

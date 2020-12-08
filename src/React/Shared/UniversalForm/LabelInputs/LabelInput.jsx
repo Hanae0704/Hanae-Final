@@ -38,19 +38,25 @@ const LabelInputStyled = styled.div`
     display: flex;
 
     .label-container {
-        flex: 0 0 40%;
-        text-align: right;
+        flex: 0 0 30%;
+        text-align: left;
         padding: 10px;
-        border: dashed 1px #eee;
     }
     label {
         font-size: 16px;
         font-weight: bold;
     }
     .control {
-        flex: 0 0 60%;
+        flex: 0 0 70%;
         padding: 10px;
-        border: dashed 1px #eee;
+    }
+
+    @media (max-width: 500px) {
+
+        label {
+            font-size: 13px;
+            font-weight: bold;
+        }
     }
     
 `;

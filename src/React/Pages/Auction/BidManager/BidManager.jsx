@@ -12,14 +12,14 @@ const BidManager = () => {
 
     return (
         <BidManagerStyled className='BidManager'>
-            <NavLink className='NavLink' to ='/auction/' exact>Go back</NavLink>
-            <br></br>
+            
             {
                 (bids && bids.length > 0)
                 ? <Bids bids={ bids }/>
                 : `Currently you have no item in your cart.`
             }
-            
+            <NavLink className='NavLink' to ='/auction/' exact>Go back</NavLink>
+            <br></br>
         </BidManagerStyled>
     );
 }
@@ -29,6 +29,8 @@ export default BidManager;
 const BidManagerStyled = styled.div`
     
     .NavLink {
+        background-color: #eee;
+        color: #de6444;
         margin-bottom: 40px;
 
         display: inline-block;
@@ -36,5 +38,9 @@ const BidManagerStyled = styled.div`
         width: 150px;
         line-height: 30px;
         font-size: 16px;
+
+        &:hover {
+            background-color: #ddd;
+        }
     }
 `;

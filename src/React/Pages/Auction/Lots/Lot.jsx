@@ -33,7 +33,7 @@ const Lot = ({lot, auctionID}) => {
             <LightBox
                 isOpen = { isOpen } 
                 onClose={ handleOnClose }
-                headerText={ `Lot# ${lot.number}: ${lot.title}` }
+                headerText={ `${lot.title}` }
             >
             
             <img src={`/assets/img/auctions/${auctionID}/lots/small/${lot.images.small}`} alt={lot.title}/>
@@ -74,6 +74,11 @@ const LotStyled = styled.div`
                 margin: 10px 0px 0px;
             }
         }
+    }
+
+    .AddRemoveLot {
+        margin-bottom: 5px;
+        margin-top: -10px;
     }
     
 `;

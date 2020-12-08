@@ -87,20 +87,23 @@ const LightBoxStyled = styled.div`
         width: 300px;
 
         header {
-            background-color: teal;
+            background-color: #de6444;
             color: white;
             padding: 10px;
 
             h2 {
                 margin: 0px;
                 font-size: 20px;
+                color: white;
             }
         }
 
         .closeLightbox {
             position: absolute;
             right: 0px; top: 0px;
-            margin: 0px;
+            margin: 3px;
+            background-color: white;
+            color: #de6444;
         }
         
         .content {
