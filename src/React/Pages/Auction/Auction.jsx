@@ -16,7 +16,7 @@ const Auction = () => {
     return (
         <AuctionStyled className='Auction'>
             <Helmet>
-            <title>Contact | Amity Hair</title>
+            <title>Appointment | Amity Hair</title>
             </Helmet>
             {
                     !user.isLoggedIn &&
