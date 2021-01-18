@@ -59,7 +59,7 @@ const ButtonUnstyled = styled.button`
     outline: inherit;
 
     &:active, &:focus {
-        outline: solid 1px blue;
+        outline: solid 1px none;
     }
 
 `;

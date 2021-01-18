@@ -24,7 +24,8 @@ const FooterStyled = styled.footer`
         max-width: 180px;
     }
         text-align: center;
-        padding: 50px 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
         border-top: solid 1px #eee;
         color: #333;
         font-size: 11px;

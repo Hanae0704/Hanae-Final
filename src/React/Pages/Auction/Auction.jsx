@@ -20,7 +20,8 @@ const Auction = () => {
             </Helmet>
             {
                     !user.isLoggedIn &&
-                    <h2>LOGIN TO ADD TO YOUR CART</h2>
+                    <div className="description"><h2>LOGIN TO ADD TO YOUR CART</h2>
+                    (use meatch@me.com and 123456 to login)</div>
             }
             <Switch>
                 <Route path='/auction/bids' component={ BidManager }/>
@@ -36,8 +37,16 @@ export default Auction;
 const AuctionStyled = styled.div`
     text-align: center;
 
+    .description {
+        font-weight: 200;
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
+
     h2 {
         color: #de6444;
+        margin-top: 20px;
+        
     }
 
     .cart {

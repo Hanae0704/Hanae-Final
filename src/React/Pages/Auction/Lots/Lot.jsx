@@ -21,14 +21,11 @@ const Lot = ({lot, auctionID}) => {
  
     return (
         <LotStyled className='Lot'>
-            <img 
-                src={`/assets/img/auctions/${auctionID}/lots/small/${lot.images.small}`} 
-                alt={lot.title}
-                onClick= { handleOnOpen } 
-            />
-
-            <h3>{ `${lot.title}` }</h3>
-            <AddRemoveLot lot={ lot }/>
+            <div className="box">
+                    <h3 onClick= { handleOnOpen } >{ `${lot.title}` }</h3>
+                    <h3 className="price">Price: { lot.price }</h3>
+                    <AddRemoveLot className="addremove" lot={ lot }/>
+            </div>
 
             <LightBox
                 isOpen = { isOpen } 
@@ -38,7 +35,7 @@ const Lot = ({lot, auctionID}) => {
             
             <img src={`/assets/img/auctions/${auctionID}/lots/small/${lot.images.small}`} alt={lot.title}/>
             <h3>{ `${lot.title}` }</h3>
-            <div className="artist"><b>Price:</b> { lot.price } </div>
+            <div className="artist"><b>Price: </b> { lot.price } </div>
             <br></br>
             <AddRemoveLot lot={ lot }/>
 
@@ -51,14 +48,28 @@ export default Lot;
 
 const LotStyled = styled.div`
 
+    @media (max-width: 370px) {
+        font-size: 12px;
+    }
+
     img {
         max-width: 100%;
     }
 
-    flex: 0 0 200px;
-    margin: 10px;
+    .box {
+        display: flex;
+        justify-content: center;
+        margin: 0 10px;
+    }
 
-    border: solid 1px #eee;
+    .price {
+        margin-left: 10px;
+    }
+
+    flex: 0 1200px;
+    margin: 0px 10px 10px;
+
+    border-bottom: solid 1px #eee;
 
     cursor: pointer;
 
@@ -76,9 +87,4 @@ const LotStyled = styled.div`
         }
     }
 
-    .AddRemoveLot {
-        margin-bottom: 5px;
-        margin-top: -10px;
-    }
-    
 `;

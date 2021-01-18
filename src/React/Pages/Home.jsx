@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Body from './Body/Body.jsx';
+import Slideshow from './Slideshow/Slideshow.jsx';
 
 const Home = () => {
 
@@ -11,7 +12,7 @@ const Home = () => {
             <title>Amity Hair | Los Angeles</title>
             </Helmet>
             <div className="box">
-            <img src="/assets/img/home-slides/1.jpg" alt="Home"/>
+            <Slideshow/>
             <div className="text">- Welcome to Amity Hair -</div>
             </div>
             <Body/>
@@ -25,7 +26,7 @@ const HomeStyled = styled.div`
 
     text-align: center;
 
-    img {
+    .Slideshow {
         max-width: 100%;
     }
 

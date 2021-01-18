@@ -26,7 +26,7 @@ const Feedback = () => {
         return '';
     }
 
-    const theColor = (formStatus === 'success') ? 'green':'maroon';
+    const theColor = (formStatus === 'success') ? '#de6444':'#ee5d37';
 
     return (
         <FeedbackStyled className='Feedback' theColor={ theColor }>
@@ -60,6 +60,9 @@ const FeedbackStyled = styled.div`
         top: 5px;
         padding: 5px 10px;
         margin: 0px;
+    
+        background-color: white;
+        color: #ee5d37;
 
     }
 

@@ -41,8 +41,12 @@ const LotsStyled = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 40px;
     
+}
+
+.cart {
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
     
 `;

@@ -36,5 +36,5 @@ const Contact = () => {
 export default Contact;
 
 const ContactStyled = styled.div`
-
+    margin-bottom: 40px;
 `;
